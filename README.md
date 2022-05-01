@@ -359,9 +359,9 @@ ggplot(data = dailyActivity, aes(x = VeryActiveMinutes, y = Calories, color = Ve
 
 ### Key Findings: final conclusions. 
 
-- Highest data traffic record was on Tuesday and Saturday, with Sunday as least data recorded day. This was a limitation mentioned above in that section.
+- Highest data traffic was recorder on Tuesday and Saturday, with Sunday as least data recorded day. This was a limitation mentioned above in that section.
 
-- They days with the highest steps average were Tuesday with 9017 steps and Saturday with 8622 steps taken. Monday was also shown as one of the highest average steps days with a total of 8644. 
+- The days with the highest steps average were Tuesday with 9017 steps and Saturday with 8622 steps taken. Monday was also shown as one of the highest average steps days with a total of 8644. 
 
 - The tendency of users to be Very Active meant they took more steps and burned more calories during this time, also meaning there was a positive relationship between these variables and users could use this data to stay healthy and achieve their desired outcome using the technologic products provided. 
 
