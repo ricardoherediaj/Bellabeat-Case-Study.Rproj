@@ -68,7 +68,14 @@ library(knitr)
 ## Importing CSV files
 
 ```{r}
-
+dailyActivity <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/dailyActivity_merged.csv")
+dailyCalories <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/dailyCalories_merged.csv")
+dailyIntensities <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/dailyIntensities_merged.csv")
+dailySteps <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/dailySteps_merged.csv")
+sleepDay <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/sleepDay_merged.csv")
+weight <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/weightLogInfo_merged.csv")
+heartrate <- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/heartrate_seconds_merged.csv") 
+minuteMETS<- read_csv("~/Desktop/Fitabase_Data_4.12.16-5.12.16/minuteMETsNarrow_merged.csv")
 ```
 
 ## Exploring tables, getting to know the data
@@ -164,7 +171,6 @@ minuteMETS$Datetime <- mdy_hms(minuteMETS$ActivityMinute)
 weight$Datetime <- mdy_hms(weight$Date)
 str(sleepDay)
 str(dailyActivity)
-
 ```
 
 # Creating Weekday variable in dailyActivity
@@ -279,7 +285,7 @@ According to the findings in this area plot that shows the continuos performance
 
 ```{r}
 dailyActivity %>% 
-  group_by(ActivityDate) %>%
+  group_by(Date) %>%
   summarise(average_steps_by_date = mean(TotalSteps)) %>%
   ggplot()+
    geom_area(aes(x = ActivityDate, y = average_steps_by_date, fill = "red")) +
