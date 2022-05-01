@@ -229,6 +229,7 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = SedentaryMinutes)) +
   labs(title = "Total Steps vs Sedentary Minutes")+
   xlab("Total Steps")
 ```
+<img src="images/graphic1.png" width="600" >
 
 ### Very Active Minutes vs Total Steps
 
@@ -242,6 +243,7 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = VeryActiveMinutes )) +
   labs(title = "Very Active Minutes vs Total Steps")+
   xlab("Total Steps")
 ```
+<img src="images/graphic2.png" width="600" >
 
 ### Minutes Asleep vs. Time In Bed
 
@@ -253,6 +255,7 @@ ggplot(data = merged_activity_sleepDay, mapping = aes(x = TotalMinutesAsleep, y 
   geom_smooth(span = 0.75)
   labs(title = "Total Minutes Asleep vs Total Time In Bed")
 ```
+<img src="images/graphic3.png" width="600" >
 
 ## Data Recording by smart device
 
@@ -263,6 +266,7 @@ ggplot(data = merged_data) +
   geom_bar(mapping = aes(x = Weekday, y = Id, fill = "cut"), stat =  "identity") +
   labs(title = "Data Recording through Week", x = "Weekday", y = "Data Recorded")
 ```
+<img src="images/graphic4.png" width="600" >
 
 ## Steps taken by each Day of the week 
 
@@ -278,6 +282,7 @@ WeekdaySteps <- merged_data %>%
   geom_bar(mapping = aes(x = Weekday, y = average_steps_Weekday, fill = "cut"), stat =  "identity") +
   labs(title = "Steps taken at weekdays", x = "Weekday", y = "Average Steps")
 ```
+<img src="images/graphic5.png" width="600" >
 
 ## Average Steps vs Date
 
@@ -291,6 +296,7 @@ dailyActivity %>%
    geom_area(aes(x = ActivityDate, y = average_steps_by_date, fill = "red")) +
    labs(title="Average Steps vs Date", x = "Date", y = "Average Steps")
 ```
+<img src="images/graphic6.png" width="600" >
 
 ## Total Steps vs Calories
 
@@ -306,6 +312,7 @@ As the caption of the plot praises: taking more steps will indoubtedly increase 
   xlab("TotalSteps")+
   scale_color_gradient(low = "brown", high = "steelblue")
 ```
+<img src="images/graphic7.png" width="600" >
 
 ## Total Distance vs Calories burnt
 
@@ -319,6 +326,7 @@ ggplot(data = merged_activity_sleepDay, mapping = aes(x = TotalDistance, y = Cal
   xlab("TotalDistance")+
   scale_color_gradient(low = "brown", high = "steelblue")
 ```
+<img src="images/graphic8.png" width="600" >
 
 ## Minutes Asleep vs Calories
 
@@ -331,6 +339,7 @@ ggplot(data = merged_activity_sleepDay, aes(x = TotalMinutesAsleep, y = Calories
   xlab("Total Minutes Asleep")+
   scale_color_gradient(low="brown", high="steelblue")
 ```
+<img src="images/graphic9.png" width="600" >
 
 # Very Active Minutes vs Calories
 
@@ -344,6 +353,7 @@ ggplot(data = dailyActivity, aes(x = VeryActiveMinutes, y = Calories, color = Ve
   xlab("Very Active Minutes")+
   scale_color_gradient(low="brown", high="steelblue")
 ```
+<img src="images/graphic10.png" width="600" >
 
 ## 6. Act
 
